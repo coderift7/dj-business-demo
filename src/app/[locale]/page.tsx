@@ -133,7 +133,7 @@ export default function HomePage() {
           <img
             src={`${basePath}/logo.jpeg`}
             alt="DJ Murti"
-            className="h-12 sm:h-14 w-auto object-contain rounded-md"
+            className="h-14 sm:h-16 w-auto object-contain rounded-md"
           />
         </a>
 
@@ -168,16 +168,19 @@ export default function HomePage() {
           style={{ opacity: heroOpacity, scale: heroScale }}
           className="relative flex min-h-screen items-center justify-center overflow-hidden px-6"
         >
-          {/* Ambient orbs */}
+          {/* Hero Background Image/Video */}
+          <div className="absolute inset-0">
+            <img
+              src={`${basePath}/images/hero-wedding.png`}
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black" />
+          </div>
+
+          {/* Ambient orbs (over image) */}
           <div className="ambient-orb top-1/4 -left-32 h-96 w-96 bg-neon-purple/20" style={{ animationDelay: '0s' }} />
           <div className="ambient-orb bottom-1/4 -right-32 h-80 w-80 bg-neon-pink/20" style={{ animationDelay: '1.5s' }} />
-          <div className="ambient-orb top-1/2 left-1/2 -translate-x-1/2 h-64 w-64 bg-neon-cyan/10" style={{ animationDelay: '0.8s' }} />
-
-          {/* Grid lines */}
-          <div className="absolute inset-0 opacity-[0.03]" style={{
-            backgroundImage: 'linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }} />
 
           <div className="relative z-10 text-center max-w-5xl">
             {/* Floating Logo */}
