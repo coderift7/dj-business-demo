@@ -127,13 +127,13 @@ export default function HomePage() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-2 h-16 sm:h-20 backdrop-blur-xl bg-black/40 border-b border-white/5"
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-1 backdrop-blur-xl bg-black/40 border-b border-white/5"
       >
         <a href="#hero" className="flex-shrink-0">
           <img
             src={`${basePath}/logo.jpeg`}
             alt="DJ Murti"
-            className="h-full w-auto object-contain rounded-md"
+            className="h-14 sm:h-[4.5rem] w-auto object-contain rounded-md"
           />
         </a>
 
