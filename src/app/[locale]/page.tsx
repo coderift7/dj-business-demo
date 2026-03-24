@@ -168,31 +168,45 @@ export default function HomePage() {
           style={{ opacity: heroOpacity, scale: heroScale }}
           className="relative flex min-h-screen items-center justify-center overflow-hidden px-6"
         >
-          {/* Hero Background Video */}
-          <div className="absolute inset-0">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster={`${basePath}/images/hero-wedding.png`}
-              className="absolute inset-0 w-full h-full object-cover"
-            >
-              <source src={`${basePath}/images/hero-video.mp4`} type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black" />
-          </div>
-
-          {/* Ambient orbs (over image) */}
+          {/* Ambient orbs */}
           <div className="ambient-orb top-1/4 -left-32 h-96 w-96 bg-neon-purple/20" style={{ animationDelay: '0s' }} />
           <div className="ambient-orb bottom-1/4 -right-32 h-80 w-80 bg-neon-pink/20" style={{ animationDelay: '1.5s' }} />
+          <div className="ambient-orb top-1/2 left-1/2 -translate-x-1/2 h-64 w-64 bg-neon-cyan/10" style={{ animationDelay: '0.8s' }} />
 
-          <div className="relative z-10 text-center max-w-5xl pt-20">
-            <motion.p
+          {/* Grid lines */}
+          <div className="absolute inset-0 opacity-[0.03]" style={{
+            backgroundImage: 'linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)',
+            backgroundSize: '60px 60px',
+          }} />
+
+          <div className="relative z-10 text-center max-w-5xl">
+            {/* Floating Logo */}
+            <motion.div
               variants={fadeUp}
               initial="hidden"
               animate="visible"
               custom={0}
+              className="mb-8"
+            >
+              <motion.div
+                animate={{ y: [0, -12, 0] }}
+                transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+                className="inline-block"
+              >
+                <img
+                  src={`${basePath}/logo.jpeg`}
+                  alt="DJ Murti"
+                  className="w-48 sm:w-64 md:w-80 h-auto mx-auto rounded-2xl"
+                  style={{ filter: 'drop-shadow(0 0 30px rgba(139,92,246,0.4)) drop-shadow(0 0 60px rgba(236,72,153,0.2))' }}
+                />
+              </motion.div>
+            </motion.div>
+
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              custom={1}
               className="mb-4 text-sm uppercase tracking-[0.3em] text-neon-cyan glow-cyan"
             >
               {t('hero.tagline')}
@@ -202,7 +216,7 @@ export default function HomePage() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              custom={1}
+              custom={2}
               className="font-[family-name:var(--font-bebas-neue)] text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] leading-[0.85] tracking-wide"
             >
               <span className="bg-gradient-to-r from-neon-purple via-neon-pink to-neon-cyan bg-clip-text text-transparent">
@@ -214,7 +228,7 @@ export default function HomePage() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              custom={2}
+              custom={3}
               className="mt-6 text-lg text-white/60 max-w-2xl mx-auto"
             >
               {t('hero.subline')}
@@ -224,7 +238,7 @@ export default function HomePage() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              custom={3}
+              custom={4}
               className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <a
@@ -293,6 +307,23 @@ export default function HomePage() {
                 </motion.div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* ======== VIDEO SHOWCASE ======== */}
+        <section className="relative py-0 overflow-hidden">
+          <div className="relative w-full h-[50vh] sm:h-[60vh]">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster={`${basePath}/images/hero-wedding.png`}
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src={`${basePath}/images/hero-video.mp4`} type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
           </div>
         </section>
 
