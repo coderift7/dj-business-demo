@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useState } from 'react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const basePath = process.env.NODE_ENV === 'production' ? '/dj-business-demo' : '';
 
 /* ============================================================
    Animations
