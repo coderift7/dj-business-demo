@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "DJ Murti — Events & Entertainment in Limburg",
+    "description": "Professional DJ service for weddings, birthdays and events in Limburg and beyond. Persian, German & International music."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "gallery": "Gallery",
+    "music": "Sound",
+    "contact": "Contact",
+    "bookNow": "Book Now"
+  },
+  "hero": {
+    "tagline": "Events & Entertainment",
+    "headline": "Your DJ for unforgettable nights",
+    "subline": "Weddings · Birthdays · Club Nights · Corporate Events — in Limburg and wherever the music plays.",
+    "cta": "Get in touch",
+    "ctaSecondary": "My Music"
+  },
+  "about": {
+    "title": "About DJ Murti",
+    "text": "Music connects cultures. As a DJ, I bring together Persian beats, German party classics and international hits — for events nobody forgets.",
+    "experience": "Years Experience",
+    "events": "Events",
+    "languages": "Languages"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "From intimate to epic — always the right sound.",
+    "wedding": {
+      "title": "Weddings",
+      "description": "The most important day of your life deserves the perfect soundtrack. From the ceremony to the last hour on the dance floor."
+    },
+    "birthday": {
+      "title": "Birthdays & Celebrations",
+      "description": "Whether 18th or 50th — I make sure your guests never stop dancing."
+    },
+    "club": {
+      "title": "Club Nights & Parties",
+      "description": "Persian nights, Latin vibes or mainstream — I read the crowd and deliver the beat."
+    },
+    "corporate": {
+      "title": "Corporate Events",
+      "description": "Professional, reliable and exactly the right atmosphere for your business event."
+    }
+  },
+  "music": {
+    "title": "My Sound",
+    "subtitle": "Three worlds, one DJ.",
+    "persian": "Persian Hits",
+    "german": "German Classics",
+    "international": "International"
+  },
+  "contact": {
+    "title": "Let's talk",
+    "subtitle": "Tell me about your event — I'll take care of the rest.",
+    "name": "Name",
+    "email": "Email",
+    "date": "Preferred Date",
+    "eventType": "Event Type",
+    "message": "Tell me more...",
+    "send": "Send Message",
+    "success": "Message sent! I'll get back to you as soon as possible."
+  },
+  "footer": {
+    "followMe": "Follow me",
+    "rights": "All rights reserved.",
+    "imprint": "Legal Notice",
+    "privacy": "Privacy Policy"
+  },
+  "languageSwitcher": {
+    "de": "Deutsch",
+    "fa": "فارسی",
+    "en": "English"
+  }
+}

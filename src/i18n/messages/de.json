@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "DJ Murti — Events & Entertainment in Limburg",
+    "description": "Professioneller DJ-Service für Hochzeiten, Geburtstage und Events in Limburg und Umgebung. Persisch, Deutsch & International."
+  },
+  "nav": {
+    "home": "Start",
+    "about": "Über mich",
+    "services": "Leistungen",
+    "gallery": "Galerie",
+    "music": "Sound",
+    "contact": "Kontakt",
+    "bookNow": "Jetzt buchen"
+  },
+  "hero": {
+    "tagline": "Events & Entertainment",
+    "headline": "Dein DJ für unvergessliche Nächte",
+    "subline": "Hochzeiten · Geburtstage · Club-Nights · Firmenevents — in Limburg und überall wo die Musik spielt.",
+    "cta": "Jetzt anfragen",
+    "ctaSecondary": "Meine Musik"
+  },
+  "about": {
+    "title": "Über DJ Murti",
+    "text": "Musik verbindet Kulturen. Als DJ bringe ich persische Beats, deutsche Partyklassiker und internationale Hits zusammen — für Events die niemand vergisst.",
+    "experience": "Jahre Erfahrung",
+    "events": "Events",
+    "languages": "Sprachen"
+  },
+  "services": {
+    "title": "Leistungen",
+    "subtitle": "Von intim bis episch — immer der richtige Sound.",
+    "wedding": {
+      "title": "Hochzeiten",
+      "description": "Der wichtigste Tag eures Lebens verdient den perfekten Soundtrack. Von der Zeremonie bis zur letzten Stunde auf der Tanzfläche."
+    },
+    "birthday": {
+      "title": "Geburtstage & Feiern",
+      "description": "Ob 18. oder 50. — ich sorge dafür, dass deine Gäste nicht mehr aufhören zu tanzen."
+    },
+    "club": {
+      "title": "Club-Nights & Partys",
+      "description": "Persische Nächte, Latin Vibes oder Mainstream — ich lese die Crowd und liefere den Beat."
+    },
+    "corporate": {
+      "title": "Firmenevents",
+      "description": "Professionell, zuverlässig und genau die richtige Stimmung für euer Business-Event."
+    }
+  },
+  "music": {
+    "title": "Mein Sound",
+    "subtitle": "Drei Welten, ein DJ.",
+    "persian": "Persische Hits",
+    "german": "Deutsche Klassiker",
+    "international": "International"
+  },
+  "contact": {
+    "title": "Lass uns reden",
+    "subtitle": "Erzähl mir von deinem Event — ich mache den Rest.",
+    "name": "Name",
+    "email": "E-Mail",
+    "date": "Wunschtermin",
+    "eventType": "Art des Events",
+    "message": "Erzähl mir mehr...",
+    "send": "Nachricht senden",
+    "success": "Nachricht gesendet! Ich melde mich schnellstmöglich."
+  },
+  "footer": {
+    "followMe": "Folge mir",
+    "rights": "Alle Rechte vorbehalten.",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "languageSwitcher": {
+    "de": "Deutsch",
+    "fa": "فارسی",
+    "en": "English"
+  }
+}
