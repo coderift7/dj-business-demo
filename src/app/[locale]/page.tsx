@@ -127,13 +127,13 @@ export default function HomePage() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-3 backdrop-blur-xl bg-black/40 border-b border-white/5"
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-2 h-16 sm:h-20 backdrop-blur-xl bg-black/40 border-b border-white/5"
       >
         <a href="#hero" className="flex-shrink-0">
           <img
             src={`${basePath}/logo.jpeg`}
             alt="DJ Murti"
-            className="h-16 sm:h-20 w-auto object-contain rounded-md"
+            className="h-full w-auto object-contain rounded-md"
           />
         </a>
 
@@ -380,7 +380,7 @@ export default function HomePage() {
               <motion.div variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1} whileHover={{ scale: 1.03, transition: { duration: 0.3 } }} className="relative rounded-3xl bg-card border border-white/5 p-8 text-center box-glow-pink cursor-default">
                 <div className="text-5xl mb-4">🎶</div>
                 <h3 className="font-[family-name:var(--font-bebas-neue)] text-3xl tracking-wider text-neon-pink mb-2">{t('music.german')}</h3>
-                <p className="text-sm text-white/40">Schlager • 90er • Charts</p>
+                <p className="text-sm text-white/40">Arabic Pop • Rai • Turkish</p>
                 <EqBars color="pink" />
               </motion.div>
               {/* International */}
