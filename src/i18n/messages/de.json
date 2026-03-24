@@ -15,7 +15,7 @@
   "hero": {
     "tagline": "Events & Entertainment",
     "headline": "Dein DJ für unvergessliche Nächte",
-    "subline": "Hochzeiten · Geburtstage · Club-Nights · Firmenevents — in Limburg und überall wo die Musik spielt.",
+    "subline": "Hochzeiten · Geburtstage · Persische Feiern · Club-Nights — in Limburg und überall wo die Musik spielt.",
     "cta": "Jetzt anfragen",
     "ctaSecondary": "Meine Musik"
   },
@@ -42,8 +42,8 @@
       "description": "Persische Nächte, Latin Vibes oder Mainstream — ich lese die Crowd und liefere den Beat."
     },
     "corporate": {
-      "title": "Firmenevents",
-      "description": "Professionell, zuverlässig und genau die richtige Stimmung für euer Business-Event."
+      "title": "Persische Feiern",
+      "description": "Nowruz, Yalda oder Familienfeier — ich kenne die Musik, die Traditionen und bringe deine Community zum Tanzen."
     }
   },
   "music": {
