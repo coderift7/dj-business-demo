@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useState } from 'react';
+import Image from 'next/image';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 /* ============================================================
@@ -127,12 +128,15 @@ export default function HomePage() {
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 backdrop-blur-xl bg-black/40 border-b border-white/5"
       >
-        <a
-          href="#hero"
-          className="font-[family-name:var(--font-bebas-neue)] text-2xl tracking-wider"
-        >
-          <span className="text-neon-purple glow-purple">DJ</span>{' '}
-          <span className="text-white">MURTI</span>
+        <a href="#hero" className="flex-shrink-0">
+          <Image
+            src="/logo.jpeg"
+            alt="DJ Murti"
+            width={120}
+            height={40}
+            className="h-8 w-auto object-contain"
+            priority
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -178,11 +182,36 @@ export default function HomePage() {
           }} />
 
           <div className="relative z-10 text-center max-w-5xl">
-            <motion.p
+            {/* Floating Logo */}
+            <motion.div
               variants={fadeUp}
               initial="hidden"
               animate="visible"
               custom={0}
+              className="mb-8"
+            >
+              <motion.div
+                animate={{ y: [0, -12, 0] }}
+                transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+                className="inline-block"
+              >
+                <Image
+                  src="/logo.jpeg"
+                  alt="DJ Murti"
+                  width={400}
+                  height={400}
+                  className="w-48 sm:w-64 md:w-80 h-auto mx-auto rounded-2xl"
+                  style={{ filter: 'drop-shadow(0 0 30px rgba(139,92,246,0.4)) drop-shadow(0 0 60px rgba(236,72,153,0.2))' }}
+                  priority
+                />
+              </motion.div>
+            </motion.div>
+
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              custom={1}
               className="mb-4 text-sm uppercase tracking-[0.3em] text-neon-cyan glow-cyan"
             >
               {t('hero.tagline')}
@@ -192,7 +221,7 @@ export default function HomePage() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              custom={1}
+              custom={2}
               className="font-[family-name:var(--font-bebas-neue)] text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] leading-[0.85] tracking-wide"
             >
               <span className="bg-gradient-to-r from-neon-purple via-neon-pink to-neon-cyan bg-clip-text text-transparent">
@@ -204,7 +233,7 @@ export default function HomePage() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              custom={2}
+              custom={3}
               className="mt-6 text-lg text-white/60 max-w-2xl mx-auto"
             >
               {t('hero.subline')}
@@ -214,7 +243,7 @@ export default function HomePage() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              custom={3}
+              custom={4}
               className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <a
@@ -505,10 +534,7 @@ export default function HomePage() {
       {/* ======== FOOTER ======== */}
       <footer className="border-t border-white/5 py-12 px-6">
         <div className="mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="font-[family-name:var(--font-bebas-neue)] text-xl tracking-wider">
-            <span className="text-neon-purple">DJ</span>{' '}
-            <span className="text-white/80">MURTI</span>
-          </div>
+          <Image src="/logo.jpeg" alt="DJ Murti" width={120} height={40} className="h-8 w-auto object-contain" />
 
           <div className="flex items-center gap-6">
             <a href="#" className="text-white/40 hover:text-neon-purple transition-colors">
