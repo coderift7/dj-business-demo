@@ -4,7 +4,6 @@ import { useTranslations, useLocale } from 'next-intl';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useState } from 'react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import AnimatedLogo from '@/components/AnimatedLogo';
 
 const basePath = process.env.NODE_ENV === 'production' ? '/dj-business-demo' : '';
 
@@ -181,20 +180,38 @@ export default function HomePage() {
           }} />
 
           <div className="relative z-10 text-center max-w-5xl">
-            {/* Animated Logo with live EQ bars */}
+            {/* Floating Logo */}
             <motion.div
               variants={fadeUp}
               initial="hidden"
               animate="visible"
               custom={0}
-              className="mb-6"
+              className="mb-8"
             >
               <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
+                animate={{
+                  y: [0, -14, 0],
+                  rotateY: [0, 5, 0, -5, 0],
+                  scale: [1, 1.03, 1, 1.03, 1],
+                }}
+                transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
                 className="inline-block"
               >
-                <AnimatedLogo />
+                <motion.img
+                  src={`${basePath}/logo.jpeg`}
+                  alt="DJ Murti"
+                  className="w-48 sm:w-64 md:w-80 h-auto mx-auto rounded-2xl"
+                  animate={{
+                    filter: [
+                      'drop-shadow(0 0 20px rgba(139,92,246,0.3)) drop-shadow(0 0 40px rgba(236,72,153,0.15))',
+                      'drop-shadow(0 0 40px rgba(139,92,246,0.6)) drop-shadow(0 0 80px rgba(236,72,153,0.35))',
+                      'drop-shadow(0 0 20px rgba(6,182,212,0.4)) drop-shadow(0 0 60px rgba(139,92,246,0.25))',
+                      'drop-shadow(0 0 40px rgba(236,72,153,0.5)) drop-shadow(0 0 80px rgba(6,182,212,0.3))',
+                      'drop-shadow(0 0 20px rgba(139,92,246,0.3)) drop-shadow(0 0 40px rgba(236,72,153,0.15))',
+                    ],
+                  }}
+                  transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+                />
               </motion.div>
             </motion.div>
 
