@@ -133,7 +133,7 @@ export default function HomePage() {
           <img
             src={`${basePath}/logo.jpeg`}
             alt="DJ Murti"
-            className="h-14 sm:h-16 w-auto object-contain rounded-md"
+            className="h-16 sm:h-20 w-auto object-contain rounded-md"
           />
         </a>
 
