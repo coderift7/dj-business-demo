@@ -23,7 +23,7 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: GITHUB_PAGES=true npm run build
+      - run: GITHUB_PAGES=true NEXT_PUBLIC_BASE_PATH=/dj-business-demo npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

@@ -3,8 +3,9 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useState } from 'react';
-import Image from 'next/image';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 /* ============================================================
    Animations
@@ -129,13 +130,10 @@ export default function HomePage() {
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 backdrop-blur-xl bg-black/40 border-b border-white/5"
       >
         <a href="#hero" className="flex-shrink-0">
-          <Image
-            src="/logo.jpeg"
+          <img
+            src={`${basePath}/logo.jpeg`}
             alt="DJ Murti"
-            width={120}
-            height={40}
             className="h-8 w-auto object-contain"
-            priority
           />
         </a>
 
@@ -195,14 +193,11 @@ export default function HomePage() {
                 transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
                 className="inline-block"
               >
-                <Image
-                  src="/logo.jpeg"
+                <img
+                  src={`${basePath}/logo.jpeg`}
                   alt="DJ Murti"
-                  width={400}
-                  height={400}
                   className="w-48 sm:w-64 md:w-80 h-auto mx-auto rounded-2xl"
                   style={{ filter: 'drop-shadow(0 0 30px rgba(139,92,246,0.4)) drop-shadow(0 0 60px rgba(236,72,153,0.2))' }}
-                  priority
                 />
               </motion.div>
             </motion.div>
@@ -534,7 +529,7 @@ export default function HomePage() {
       {/* ======== FOOTER ======== */}
       <footer className="border-t border-white/5 py-12 px-6">
         <div className="mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <Image src="/logo.jpeg" alt="DJ Murti" width={120} height={40} className="h-8 w-auto object-contain" />
+          <img src={`${basePath}/logo.jpeg`} alt="DJ Murti" className="h-8 w-auto object-contain" />
 
           <div className="flex items-center gap-6">
             <a href="#" className="text-white/40 hover:text-neon-purple transition-colors">
