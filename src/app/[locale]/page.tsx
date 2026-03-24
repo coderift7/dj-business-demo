@@ -168,14 +168,19 @@ export default function HomePage() {
           style={{ opacity: heroOpacity, scale: heroScale }}
           className="relative flex min-h-screen items-center justify-center overflow-hidden px-6"
         >
-          {/* Hero Background Image/Video */}
+          {/* Hero Background Video */}
           <div className="absolute inset-0">
-            <img
-              src={`${basePath}/images/hero-wedding.png`}
-              alt=""
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster={`${basePath}/images/hero-wedding.png`}
               className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black" />
+            >
+              <source src={`${basePath}/images/hero-video.mp4`} type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black" />
           </div>
 
           {/* Ambient orbs (over image) */}
