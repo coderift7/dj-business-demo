@@ -9,6 +9,7 @@
     "services": "Leistungen",
     "gallery": "Galerie",
     "music": "Sound",
+    "booking": "Buchen",
     "contact": "Kontakt",
     "bookNow": "Jetzt buchen"
   },
@@ -52,6 +53,13 @@
     "persian": "Persische Hits",
     "german": "Orientalisch & Arabisch",
     "international": "International"
+  },
+  "booking": {
+    "title": "Termin buchen",
+    "subtitle": "Wähle einen freien Termin für ein unverbindliches Vorgespräch.",
+    "comingSoon": "Online-Buchung kommt bald!",
+    "comingSoonText": "Schreib mir in der Zwischenzeit über das Kontaktformular — ich melde mich innerhalb von 24 Stunden.",
+    "ctaContact": "Zum Kontaktformular"
   },
   "contact": {
     "title": "Lass uns reden",

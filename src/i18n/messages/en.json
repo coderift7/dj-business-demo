@@ -9,6 +9,7 @@
     "services": "Services",
     "gallery": "Gallery",
     "music": "Sound",
+    "booking": "Book",
     "contact": "Contact",
     "bookNow": "Book Now"
   },
@@ -52,6 +53,13 @@
     "persian": "Persian Hits",
     "german": "Oriental & Arabic",
     "international": "International"
+  },
+  "booking": {
+    "title": "Book Your Event",
+    "subtitle": "Pick a free slot for a no-obligation consultation.",
+    "comingSoon": "Online booking coming soon!",
+    "comingSoonText": "In the meantime, drop me a message via the contact form — I'll get back to you within 24 hours.",
+    "ctaContact": "Go to contact form"
   },
   "contact": {
     "title": "Let's talk",

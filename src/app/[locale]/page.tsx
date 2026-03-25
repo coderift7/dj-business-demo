@@ -7,6 +7,9 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const basePath = process.env.NODE_ENV === 'production' ? '/dj-business-demo' : '';
 
+/* Cal.com booking link — set to enable embedded calendar, leave empty for "coming soon" mode */
+const CAL_COM_LINK = ''; // e.g. 'djmurti/consultation'
+
 /* ============================================================
    Animations
    ============================================================ */
@@ -96,7 +99,7 @@ export default function HomePage() {
 
   const [formSent, setFormSent] = useState(false);
 
-  const navItems = ['about', 'services', 'music', 'contact'] as const;
+  const navItems = ['about', 'services', 'music', 'booking', 'contact'] as const;
 
   return (
     <>
@@ -435,6 +438,70 @@ export default function HomePage() {
                 <EqBars color="cyan" />
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* ======== BOOKING ======== */}
+        <section id="booking" className="relative py-32 px-6">
+          <div className="absolute inset-0 bg-gradient-to-b from-neon-purple/[0.03] via-transparent to-transparent" />
+
+          <div className="relative mx-auto max-w-4xl">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-100px' }}
+              className="text-center mb-12"
+            >
+              <h2 className="font-[family-name:var(--font-bebas-neue)] text-5xl sm:text-7xl md:text-8xl tracking-wide bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
+                {t('booking.title')}
+              </h2>
+              <p className="mt-4 text-lg text-white/50">
+                {t('booking.subtitle')}
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={scaleIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="rounded-3xl bg-card border border-white/5 overflow-hidden gradient-border"
+            >
+              {CAL_COM_LINK ? (
+                <iframe
+                  src={`https://cal.com/${CAL_COM_LINK}?embed=true&theme=dark&brandColor=%238B5CF6`}
+                  className="w-full border-0"
+                  style={{ height: '660px' }}
+                  title="Booking Calendar"
+                />
+              ) : (
+                <div className="py-20 px-8 text-center">
+                  <motion.div
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
+                    className="text-6xl mb-6"
+                  >
+                    📅
+                  </motion.div>
+                  <h3 className="text-2xl font-semibold text-white mb-3">
+                    {t('booking.comingSoon')}
+                  </h3>
+                  <p className="text-white/40 max-w-md mx-auto mb-8">
+                    {t('booking.comingSoonText')}
+                  </p>
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-neon-cyan to-neon-purple px-8 py-4 text-lg font-semibold text-white transition-all hover:shadow-[0_0_40px_rgba(6,182,212,0.4)] hover:scale-105"
+                  >
+                    <span>{t('booking.ctaContact')}</span>
+                    <svg className="h-5 w-5 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </a>
+                </div>
+              )}
+            </motion.div>
           </div>
         </section>
 
